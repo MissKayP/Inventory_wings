@@ -1,0 +1,83 @@
+/* Dashboard overall styling */
+.dashboard {
+  padding: 20px;
+}
+
+/* Stock Overview Styling */
+.stock-overview {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #ebe4e4; /* White background for the chart container */
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+  padding: 20px;
+  background-color: #ffffff; /* Ensures the chart itself has a white background */
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Low Stock Alert Styling */
+.low-stock-alert {
+  margin-bottom: 40px;
+}
+
+/* Stock Carousel Styling */
+.stock-carousel {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f8f8; /* Light background to differentiate the section */
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Smaller carousel images with uniform sizing */
+.stock-carousel .carousel .slide img {
+  max-height: 200px; /* Reduced image height */
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stock-overview,
+  .stock-carousel,
+  .product-table-container {
+    padding: 15px;
+  }
+
+  .stock-carousel .carousel .slide img {
+    max-height: 150px; /* Further reduce image height on smaller screens */
+  }
+}
+
+/* Product Table Container */
+.product-table-container {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff; /* White background for the table */
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Table Styling */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}

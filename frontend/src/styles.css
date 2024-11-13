@@ -1,0 +1,341 @@
+body { 
+    background: url('bgcafe.JPG') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #e67299;
+    position: relative;
+}
+
+body::after {
+    /* Overlay to darken the background */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: -1; /* Ensure overlay is below text */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+
+.loginHead {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.loginHead h1 {
+    font-size: 60px;
+    color: #f685a2;
+    margin: 0;
+}
+
+.loginHead p {
+    color: #E9967A;
+    font-size: 50px;
+    margin: 0;
+}
+
+.loginHead p:after {
+    content: '';
+    display: block;
+    height: 5px;
+    background: #f685a2;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Sets a max width for the login container */
+.loginBox {
+    width: 100%;
+    max-width: 500px;   /* Adjust as desired */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.loginBox form {
+    margin: 0;
+}
+
+.login-section, .loginInputContainer {
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Smaller font size for labels */
+.loginInputContainer label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;  /* Reduced font size */
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Container to control input sizes */
+.loginInputContainer input {
+    width: 100%;               /* Make both username and password inputs take full width */
+    max-width: 450px;           /* Control max width to ensure inputs are not too wide */
+    height: 40px;               /* Consistent height for both fields */
+    padding: 10px;              /* Consistent padding for uniform appearance */
+    margin: 5px 0;              /* Space between inputs */
+    font-size: 18px;            /* Font size for readability */
+    border: 2px solid #d40339;  /* Border color */
+    border-radius: 4px;
+    box-sizing: border-box;     /* Ensures padding doesn’t affect width */
+    background: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+    color: #000;
+}
+
+/* Focus style to highlight selected field */
+.loginInputContainer input:focus {
+    border-color: #e67299;
+    background: rgba(255, 255, 255, 0.9); /* Increase opacity when focused */
+    outline: none;
+}
+
+.LoginButtonContainer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.LoginButtonContainer button {
+    font-size: 30px;
+    padding: 10px 30px;
+    background: #f685a2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.LoginButtonContainer button:hover {
+    background: #e67299;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.nav-link {
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+    background: #e67299; /* Hover effect */
+    color: #ffffff;
+}
+
+.logout-button {
+    font-size: 18px;
+    padding: 8px 15px;
+    background: #f685a2;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+    background: #e67299;
+}
+
+.low-stock-alert {
+    background-color: #ffe5e5;
+    color: #d40339;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid #d40339;
+}
+
+.low-stock-alert h2 {
+    margin-top: 0;
+}
+
+.low-stock-alert ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.low-stock-alert li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.user-management {
+    padding: 50px;
+}
+
+.form-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.form-container h2 {
+    margin-top: 0;
+}
+
+.form-container label {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;  /* Reduced font size */
+}
+
+.form-container input, .form-container select, .form-container button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-list th, .user-list td {
+    padding: 10px;
+    border: 10px solid #ddd;
+    text-align: center;
+    font-size: 20px;
+}
+
+.user-list button {
+    margin: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f685a2;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.user-list button:hover {
+    background-color: #e67299;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%; /* Make input fields take full width */
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 16px; /* Increase font size */
+    margin-bottom: 10px; /* Add some space below each field */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    padding: 10px 15px; /* Increase button padding */
+    font-size: 16px; /* Increase button font size */
+    border-radius: 5px; /* Rounded corners */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.1em;
+    text-align: left;
+}
+  
+th, td {
+    padding: 12px 15px;
+}
+  
+th {
+    background-color: #e67299;
+    color: white;
+    text-align: center;
+}
+  
+td {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+}
+  
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+  
+tr:hover {
+    background-color: #f1f1f1;
+}
+  
+button {
+    background-color: #e67299; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+  
+button:hover {
+    background-color: #e67299;
+}
+  
+form {
+    margin-bottom: 20px;
+}
+  
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #e67299;
+    outline: none;
+}
+
+/* Styling for table headers */
+.product-table th {
+    color: #808080; /* Grey color */
+    font-size: 18px; /* Adjust the size if needed */
+    font-weight: bold; /* Optional: make the table headers bold */
+    background-color: #f2f2f2; /* Optional: Background color for headers */
+}
+
+/* Optional: Table header hover effect */
+.product-table th:hover {
+    background-color: #e0e0e0; /* Light grey when hovered */
+}
